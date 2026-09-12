@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>BarneBrøk – Hel og halv</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Startskjerm: ett trykk låser opp lyd og stemme -->
+<div id="start" class="overlay">
+  <div class="start-card">
+    <div class="start-apple" aria-hidden="true"></div>
+    <button id="startBtn" aria-label="Start leken">▶</button>
+  </div>
+</div>
+
+<div id="scene" data-phase="idle">
+  <div id="sun" aria-hidden="true"></div>
+  <div id="table" aria-hidden="true"></div>
+
+  <div class="friend" id="friendA" data-face="neutral" data-name="bamsen" data-cap="Bamsen">
+    <div class="body"></div>
+    <div class="plate"></div>
+  </div>
+
+  <div class="friend" id="friendB" data-face="neutral" data-name="kaninen" data-cap="Kaninen">
+    <div class="body"></div>
+    <div class="plate"></div>
+  </div>
+
+  <div id="food" role="button" aria-label="Del maten"></div>
+  <div class="half" id="halfL" data-side="left"></div>
+  <div class="half" id="halfR" data-side="right"></div>
+  <div id="knife" aria-hidden="true">🔪</div>
+
+  <div id="confetti" aria-hidden="true"></div>
+
+  <button id="infoBtn" aria-label="Tips til den voksne">?</button>
+</div>
+
+<!-- Voksenmodus -->
+<div id="info" class="overlay hidden">
+  <div class="info-card">
+    <h1>Tips til den voksne</h1>
+    <p>Appen lærer ikke brøk som tall, men det brøk bygger på: at en hel kan deles i like store biter, og at bitene kan settes sammen igjen.</p>
+    <ul>
+      <li><strong>Bruk ordene høyt:</strong> «halvparten», «to halve», «like mye», «en hel».</li>
+      <li><strong>Spør, ikke forklar:</strong> «Fikk begge like mye?» «Hva skjer om bamsen får begge bitene?»</li>
+      <li><strong>Ta det med til bordet:</strong> del en brødskive eller et eple i to og si «nå får du halvparten».</li>
+      <li><strong>Feil finnes ikke.</strong> Om barnet gir begge bitene til én venn, blir den andre bare litt lei seg. Det er en invitasjon til å prøve igjen.</li>
+    </ul>
+    <p class="muted">Tre til fem minutter er en fin økt. Stemmen bruker nettbrettets norske talesyntese.</p>
+    <button id="infoClose" aria-label="Lukk">Tilbake til leken</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
